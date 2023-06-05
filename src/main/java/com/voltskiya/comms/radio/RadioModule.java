@@ -1,5 +1,7 @@
 package com.voltskiya.comms.radio;
 
+import com.voltskiya.comms.radio.pager.PagerCrafting;
+import com.voltskiya.comms.radio.pager.PagerTuneListener;
 import com.voltskiya.lib.AbstractModule;
 
 public class RadioModule extends AbstractModule {
@@ -15,6 +17,7 @@ public class RadioModule extends AbstractModule {
     }
     @Override
     public void enable() {
+        PagerCrafting.registerRecipes();
         new PagerTuneListener();
     }
 
